@@ -1,3 +1,6 @@
-<button *ngFor="let video of videos">
+<button
+  *ngFor="let video of videos"
+  (click)="selectVideo(video)"
+  [class.selected]="video.id === selectedVideoId">
   {{video.title}} - {{video.author}}
 </button>

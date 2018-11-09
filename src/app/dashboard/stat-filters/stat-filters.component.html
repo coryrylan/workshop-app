@@ -1,3 +1,5 @@
-<p>
-  stat-filters works!
-</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <label for="search">Search</label>
+  <input id="search" formControlName="search" />
+  <button [disabled]="!form.valid">Search</button>
+</form>
